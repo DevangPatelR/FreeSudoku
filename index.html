@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Sudoku</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Free Sudoku</h1>
+            <h3>It is free and always will be. No Ads, No Pay, Just Fun...!</h3>
+            <div class="controls">
+                <div class="dropdown">
+                    <button id="newGameBtn" class="dropdown-btn">New Medium Game ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-difficulty="easy">New Easy Game</a>
+                        <a href="#" data-difficulty="medium">New Medium Game</a>
+                        <a href="#" data-difficulty="hard">New Hard Game</a>
+                        <a href="#" data-difficulty="expert">New Expert Game</a>
+                    </div>
+                </div>
+                <button id="reset">Reset</button>
+                <button id="hint">Hint</button>
+            </div>
+        </div>
+        <div class="sudoku-grid">
+            <!-- Grid will be populated by JavaScript -->
+        </div>
+        <div class="instructions">
+            <p>Use keyboard numbers 1-9 to enter values</p>
+            <p>Press Delete or Backspace to clear a cell</p>
+        </div>
+    </div>
+    <script src="sudoku.js"></script>
+</body>
+</html>
