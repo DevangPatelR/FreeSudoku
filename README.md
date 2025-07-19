@@ -4,6 +4,12 @@
 
 A modern, responsive web-based Sudoku game with smooth animations and multiple difficulty levels. Built with vanilla HTML, CSS, and JavaScript.
 
+## 🌐 Live Demo
+
+**[🎮 Play Free Sudoku Now!](https://devangpatelr.github.io/FreeSudoku/)**
+
+Try the game directly in your browser - no installation required!
+
 ## 🎮 Features
 
 ### Core Gameplay
