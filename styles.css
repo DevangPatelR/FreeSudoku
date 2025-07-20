@@ -49,6 +49,51 @@ body {
     margin-bottom: 2rem;
 }
 
+.header-top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.title-section {
+    text-align: center;
+}
+
+.github-link-header {
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.github-link-header:hover {
+    color: var(--primary-color);
+    background: #fff;
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
+}
+
+.github-link-header svg {
+    transition: transform 0.3s ease;
+}
+
+.github-link-header:hover svg {
+    transform: rotate(360deg);
+}
+
 h1 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
@@ -271,6 +316,8 @@ button:active {
     font-size: 0.9rem;
 }
 
+
+
 /* Responsive design */
 @media (max-width: 768px) {
     :root {
@@ -288,6 +335,19 @@ button:active {
     
     h3 {
         font-size: 0.9rem;
+    }
+    
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .github-link-header {
+        position: static;
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+        order: -1;
     }
     
     .dropdown-btn {
