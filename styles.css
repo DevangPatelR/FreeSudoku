@@ -302,18 +302,97 @@ button:active {
 }
 
 .instructions {
-    text-align: center;
-    margin-top: 1rem;
-    padding: 1rem;
+    margin: 1rem auto 0;
+    max-width: 500px;
     background: #f8f9fa;
     border-radius: 10px;
     border-left: 4px solid var(--primary-color);
+    overflow: hidden;
 }
 
-.instructions p {
+.instructions-header {
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: var(--primary-color);
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.instructions-header:hover {
+    background-color: rgba(33, 150, 243, 0.1);
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+.instructions:not(.collapsed) .toggle-icon {
+    transform: rotate(90deg);
+}
+
+.instructions-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 1rem;
+}
+
+.instructions:not(.collapsed) .instructions-content {
+    max-height: 500px;
+    padding: 0 1rem 1rem;
+}
+
+.instructions h4 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin: 1rem 0 0.5rem 0;
+    text-align: left;
+}
+
+.instructions h4:first-child {
+    margin-top: 0.5rem;
+}
+
+.instructions ol, .instructions ul {
+    text-align: left;
     margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.instructions li {
+    margin: 0.3rem 0;
+    color: #555;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.instructions li strong {
+    color: var(--primary-color);
+}
+
+.instructions ul ul {
+    margin: 0.2rem 0;
+    padding-left: 1rem;
+}
+
+.instructions ul ul li {
+    font-size: 0.8rem;
     color: #666;
-    font-size: 0.9rem;
+}
+
+.how-to-play {
+    margin-bottom: 1rem;
+}
+
+.game-rules {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 0.5rem;
 }
 
 

@@ -138,6 +138,9 @@ class SudokuGame {
 
         // Dropdown functionality
         this.setupDropdown();
+        
+        // Instructions toggle
+        this.setupInstructionsToggle();
 
         // Keyboard support
         document.addEventListener('keydown', (e) => this.handleKeyPress(e));
@@ -393,6 +396,35 @@ class SudokuGame {
         const dropdownBtn = document.getElementById('newGameBtn');
         const diffName = this.difficultySettings[this.difficulty].name;
         dropdownBtn.textContent = `New ${diffName} Game ▼`;
+    }
+    
+    setupInstructionsToggle() {
+        const header = document.getElementById('instructionsToggle');
+        const instructions = document.getElementById('instructions');
+        
+        if (!header || !instructions) {
+            console.warn('Instructions toggle elements not found');
+            return;
+        }
+        
+        // Load saved state from localStorage
+        const isExpanded = localStorage.getItem('instructionsExpanded') === 'true';
+        if (isExpanded) {
+            instructions.classList.remove('collapsed');
+        }
+        
+        // Add click event listener
+        header.addEventListener('click', () => {
+            const isCurrentlyCollapsed = instructions.classList.contains('collapsed');
+            
+            if (isCurrentlyCollapsed) {
+                instructions.classList.remove('collapsed');
+                localStorage.setItem('instructionsExpanded', 'true');
+            } else {
+                instructions.classList.add('collapsed');
+                localStorage.setItem('instructionsExpanded', 'false');
+            }
+        });
     }
 }
 

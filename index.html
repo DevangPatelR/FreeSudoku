@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Sudoku</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -38,9 +40,38 @@
         <div class="sudoku-grid">
             <!-- Grid will be populated by JavaScript -->
         </div>
-        <div class="instructions">
-            <p>Use keyboard numbers 1-9 to enter values</p>
-            <p>Press Delete or Backspace to clear a cell</p>
+        <div class="instructions collapsed" id="instructions">
+            <div class="instructions-header" id="instructionsToggle">
+                <span>How to Play</span>
+                <span class="toggle-icon">▶</span>
+            </div>
+            <div class="instructions-content">
+                <div class="how-to-play">
+                    <h4>🚀 How to Play</h4>
+                    <ol>
+                        <li><strong>Start a Game:</strong> Click "New [Difficulty] Game" dropdown to select difficulty</li>
+                        <li><strong>Select a Cell:</strong> Click on any empty cell (highlighted in blue)</li>
+                        <li><strong>Enter Numbers:</strong>
+                            <ul>
+                                <li>Use keyboard keys 1-9 to enter numbers</li>
+                                <li>Press Delete or Backspace to clear a cell</li>
+                            </ul>
+                        </li>
+                        <li><strong>Get Help:</strong> Click "Hint" to fill the selected cell with the correct number</li>
+                        <li><strong>Reset:</strong> Click "Reset" to return to the original puzzle state</li>
+                    </ol>
+                </div>
+                
+                <div class="game-rules">
+                    <h4>🎯 Game Rules</h4>
+                    <ul>
+                        <li>Each row must contain digits 1-9 with no repetition</li>
+                        <li>Each column must contain digits 1-9 with no repetition</li>
+                        <li>Each 3x3 box must contain digits 1-9 with no repetition</li>
+                        <li>Invalid moves will show a red shake animation</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <script src="sudoku.js"></script>
