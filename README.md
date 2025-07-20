@@ -4,11 +4,41 @@
 
 A modern, responsive web-based Sudoku game with smooth animations and multiple difficulty levels. Built with vanilla HTML, CSS, and JavaScript.
 
+## 👨‍💻 Author
+
+Created with ❤️ by **Devang Patel**
+
 ## 🌐 Live Demo
 
 **[🎮 Play Free Sudoku Now!](https://devangpatelr.github.io/FreeSudoku/)**
 
 Try the game directly in your browser - no installation required!
+
+## 🚀 How to Play
+
+1. **Start a Game**: Click "New [Difficulty] Game" dropdown to select difficulty
+2. **Select a Cell**: Click on any empty cell (highlighted in blue)
+3. **Enter Numbers**: 
+   - Use keyboard keys 1-9 to enter numbers
+   - Press Delete or Backspace to clear a cell
+4. **Get Help**: Click "Hint" to fill the selected cell with the correct number
+5. **Reset**: Click "Reset" to return to the original puzzle state
+
+## 🎯 Game Rules
+
+- Each row must contain digits 1-9 with no repetition
+- Each column must contain digits 1-9 with no repetition  
+- Each 3x3 box must contain digits 1-9 with no repetition
+- Invalid moves will show a red shake animation
+
+## 🏆 Difficulty Levels
+
+| Level  | Cells Removed | Empty Cells | Difficulty |
+|--------|---------------|-------------|------------|
+| Easy   | 35-45         | ~40         | Beginner   |
+| Medium | 45-55         | ~50         | Casual     |
+| Hard   | 55-65         | ~60         | Challenge  |
+| Expert | 65-75         | ~70         | Master     |
 
 ## 🎮 Features
 
@@ -31,23 +61,6 @@ Try the game directly in your browser - no installation required!
 - **Smooth Animations** - Hover effects, selection highlights, error shakes
 - **Persistent Settings** - Your difficulty preference is saved
 - **Mobile Responsive** - Optimized for phones, tablets, and desktop
-
-## 🚀 How to Play
-
-1. **Start a Game**: Click "New [Difficulty] Game" dropdown to select difficulty
-2. **Select a Cell**: Click on any empty cell (highlighted in blue)
-3. **Enter Numbers**: 
-   - Use keyboard keys 1-9 to enter numbers
-   - Press Delete or Backspace to clear a cell
-4. **Get Help**: Click "Hint" to fill the selected cell with the correct number
-5. **Reset**: Click "Reset" to return to the original puzzle state
-
-## 🎯 Game Rules
-
-- Each row must contain digits 1-9 with no repetition
-- Each column must contain digits 1-9 with no repetition  
-- Each 3x3 box must contain digits 1-9 with no repetition
-- Invalid moves will show a red shake animation
 
 ## 🎨 Visual Design
 
@@ -120,23 +133,11 @@ python -m http.server 8000
 - **Final Check**: Compare completed puzzle with stored solution
 - **Smart Hints**: Use stored solution for accurate hints
 
-## 🏆 Difficulty Levels
-
-| Level  | Cells Removed | Empty Cells | Difficulty |
-|--------|---------------|-------------|------------|
-| Easy   | 35-45         | ~40         | Beginner   |
-| Medium | 45-55         | ~50         | Casual     |
-| Hard   | 55-65         | ~60         | Challenge  |
-| Expert | 65-75         | ~70         | Master     |
-
 ## 🎯 Future Enhancements
 
 - [ ] Timer functionality
 - [ ] Score tracking
-- [ ] Multiple themes
-- [ ] Undo/Redo functionality
-- [ ] Pencil marks (notes)
-- [ ] Statistics tracking
+- [ ] Global puzzle solved count
 - [ ] Daily challenges
 
 ## 📄 License
@@ -150,10 +151,6 @@ Contributions are welcome! Feel free to:
 - Suggest features
 - Submit pull requests
 - Improve documentation
-
-## 👨‍💻 Author
-
-Created with ❤️ by **Devang Patel**
 
 ---
 
