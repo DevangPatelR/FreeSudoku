@@ -461,9 +461,20 @@ button:active {
         padding: 8px;
     }
     
-    .instructions {
+    .instructions:not(.collapsed) .instructions-content {
+        max-height: 600px;
+    }
+    
+    .instructions h4 {
         font-size: 0.9rem;
-        padding: 0.8rem;
+    }
+    
+    .instructions li {
+        font-size: 0.8rem;
+    }
+    
+    .instructions ul ul li {
+        font-size: 0.75rem;
     }
 }
 
@@ -518,9 +529,22 @@ button:active {
         font-size: 1.2rem;
     }
     
-    .instructions p {
-        font-size: 0.8rem;
-        margin: 0.3rem 0;
+    .instructions:not(.collapsed) .instructions-content {
+        max-height: 700px;
+    }
+    
+    .instructions h4 {
+        font-size: 0.85rem;
+        margin: 0.8rem 0 0.4rem 0;
+    }
+    
+    .instructions li {
+        font-size: 0.75rem;
+        margin: 0.25rem 0;
+    }
+    
+    .instructions ul ul li {
+        font-size: 0.7rem;
     }
 }
 
